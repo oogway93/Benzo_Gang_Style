@@ -25,3 +25,6 @@ class Brand(models.Model):
         verbose_name_plural = 'Brands'
         db_table = 'Brand'
 
+    def __str__(self):
+        return f'{self.brand}'
+
