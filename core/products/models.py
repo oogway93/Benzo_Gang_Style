@@ -6,7 +6,7 @@ class Product(models.Model):
     clothes = models.CharField('Type of clothes', max_length=30)
     name_clothes = models.CharField('Full name of clothes', max_length=50)
     price = models.PositiveIntegerField('Price')
-    photo = models.ImageField('Photo', upload_to='image/')
+    photo = models.ImageField('Image', upload_to='product_images/', null=True, blank=True)
 
     class Meta:
         verbose_name = 'Product'
