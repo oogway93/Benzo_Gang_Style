@@ -1,5 +1,11 @@
 from products.models import Product
 from rest_framework import viewsets
-class PersonViewSet(viewsets.ModelViewSet):
-    queryset = Person.objects.all()
-    serializer_class = PersonSerializer
+
+from products.models import *
+from products.serializers import ProductSerializer
+
+
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    permission_classes = []

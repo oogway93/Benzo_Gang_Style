@@ -5,4 +5,6 @@ from .urls import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('products.urls')),
+    path('api/', include('api.urls', namespace='api'))
+
 ]
